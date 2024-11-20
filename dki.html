@@ -4,97 +4,123 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Ramabhadra&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
     <title>Quick Count</title>
 </head>
 <body>
     <div class="ads-box">
-       <!-- Navbar -->
-  <nav class="navbar">
-    <ul class="nav-list">
-      <li><a href="dki.html" class="nav-item active">DKI Jakarta</a></li>
-      <li><a href="banten.html" class="nav-item">Banten</a></li>
-      <li><a href="jabar.html" class="nav-item">Jawa Barat</a></li>
-      <li><a href="jateng.html" class="nav-item">Jawa Tengah</a></li>
-      <li><a href="jatim.html" class="nav-item">Jawa Timur</a></li>
-      <li><a href="sumut.html" class="nav-item">Sumatra Utara</a></li>
-      <li><a href="sulsel.html" class="nav-item">Sulawesi Selatan</a></li>
-    </ul>
-  </nav>
-  
-  <div class="image-table">
-    <div class="candidate-columns">
-      <!-- Kolom Logo -->
-      <div class="candidate-column">
-        <div class="empty-space"></div>
-        <div class="logo-container">
-          <div class="vote-info logo-box">
-            <img src="image/inikator.png" alt="Logo Survey" class="survey-logo">
-          </div>
-          <div class="vote-info logo-box">
-            <img src="image/kedaikopi.png" alt="Logo Survey" class="survey-logo">
-          </div>
-          <div class="vote-info logo-box">
-            <img src="image/lsi.png" alt="Logo Survey" class="survey-logo">
-          </div>
-        </div>
-      </div>
-      
-      <!-- Kolom 1 - Indikator -->
-      <div class="candidate-column">
-        <img src="image/dki1.png" alt="Calon 1" class="candidate-image">
-        <div class="vote-info" style="background-color: #FFFF00;">
-          <span class="percentage black-text">32.1%</span>
-          <span class="vote-count black-text">1,234,567 suara</span>
-        </div>
-        <div class="vote-info" style="background-color: #FFFF00;">
-          <span class="percentage black-text">33.3%</span>
-          <span class="vote-count black-text">1,234,567 suara</span>
-        </div>
-        <div class="vote-info" style="background-color: #FFFF00;">
-          <span class="percentage black-text">31.8%</span>
-          <span class="vote-count black-text">1,234,567 suara</span>
-        </div>
-      </div>
-      
-      <!-- Kolom 2 - Kedai Kopi -->
-      <div class="candidate-column">
-        <img src="image/dki2.png" alt="Calon 2" class="candidate-image">
-        <div class="vote-info" style="background-color: #DDDDDD;">
-          <span class="percentage black-text">44.2%</span>
-          <span class="vote-count black-text">2,345,678 suara</span>
-        </div>
-        <div class="vote-info" style="background-color: #DDDDDD;">
-          <span class="percentage black-text">45.7%</span>
-          <span class="vote-count black-text">2,345,678 suara</span>
-        </div>
-        <div class="vote-info" style="background-color: #DDDDDD;">
-          <span class="percentage black-text">43.9%</span>
-          <span class="vote-count black-text">2,345,678 suara</span>
-        </div>
-      </div>
-      
-      <!-- Kolom 3 - LSI -->
-      <div class="candidate-column">
-        <img src="image/dki3.png" alt="Calon 3" class="candidate-image">
-        <div class="vote-info" style="background-color: #E62020;">
-          <span class="percentage">23.7%</span>
-          <span class="vote-count">987,654 suara</span>
-        </div>
-        <div class="vote-info" style="background-color: #E62020;">
-          <span class="percentage">21.0%</span>
-          <span class="vote-count">987,654 suara</span>
-        </div>
-        <div class="vote-info" style="background-color: #E62020;">
-          <span class="percentage">24.3%</span>
-          <span class="vote-count">987,654 suara</span>
-        </div>
-      </div>
+        <!-- Navbar -->
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li><a href="dki.html" class="nav-item active">DKI Jakarta</a></li>
+                <li><a href="banten.html" class="nav-item">Banten</a></li>
+                <li><a href="jabar.html" class="nav-item">Jawa Barat</a></li>
+                <li><a href="jateng.html" class="nav-item">Jawa Tengah</a></li>
+                <li><a href="jatim.html" class="nav-item">Jawa Timur</a></li>
+                <li><a href="sumut.html" class="nav-item">Sumatra Utara</a></li>
+                <li><a href="sulsel.html" class="nav-item">Sulawesi Selatan</a></li>
+            </ul>
+        </nav>
+
+        <table class="survey-table">
+            <!-- Baris Foto Kandidat -->
+            <tr>
+                <td class="empty-cell"></td>
+                <td><img src="image/dki1.png" class="candidate-photo"></td>
+                <td><img src="image/dki2.png" class="candidate-photo"></td>
+                <td><img src="image/dki3.png" class="candidate-photo"></td>
+            </tr>
+            
+            <!-- Baris Survey Indikator -->
+            <tr class="logo-row">
+                <td class="logo-column">
+                    <img src="image/inikator.png" class="survey-logo">
+                </td>
+                <td>
+                    <div class="vote-box yellow-bg">
+                        <p class="percentage">33.3%</p>
+                    </div>
+                </td>
+                <td>
+                    <div class="vote-box gray-bg">
+                        <p class="percentage">32.1%</p>
+                    </div>
+                </td>
+                <td>
+                    <div class="vote-box red-bg">
+                        <p class="percentage">34.6%</p>
+                    </div>
+                </td>
+            </tr>
+
+            <!-- Baris Survey Y-Publica -->
+            <tr class="logo-row">
+                <td class="logo-column">
+                    <img src="image/kedaikopi.png" class="survey-logo">
+                </td>
+                <td>
+                    <div class="vote-box yellow-bg">
+                        <p class="percentage">31.8%</p>
+                    </div>
+                </td>
+                <td>
+                    <div class="vote-box gray-bg">
+                        <p class="percentage">33.3%</p>
+                    </div>
+                </td>
+                <td>
+                    <div class="vote-box red-bg">
+                        <p class="percentage">34.9%</p>
+                    </div>
+                </td>
+            </tr>
+
+            <!-- Baris Survey Polmark -->
+            <tr class="logo-row">
+                <td class="logo-column">
+                    <img src="image/lsi.png" class="survey-logo">
+                </td>
+                <td>
+                    <div class="vote-box yellow-bg">
+                        <p class="percentage">31.8%</p>
+                    </div>
+                </td>
+                <td>
+                    <div class="vote-box gray-bg">
+                        <p class="percentage">33.3%</p>
+                    </div>
+                </td>
+                <td>
+                    <div class="vote-box red-bg">
+                        <p class="percentage">34.9%</p>
+                    </div>
+                </td>
+            </tr>
+
+            <!-- Baris Survey Median -->
+            <tr class="logo-row">
+                <td class="logo-column">
+                    <img src="image/poltracking.png" class="survey-logo">
+                </td>
+                <td>
+                    <div class="vote-box yellow-bg">
+                        <p class="percentage">31.8%</p>
+                    </div>
+                </td>
+                <td>
+                    <div class="vote-box gray-bg">
+                        <p class="percentage">33.3%</p>
+                    </div>
+                </td>
+                <td>
+                    <div class="vote-box red-bg">
+                        <p class="percentage">34.9%</p>
+                    </div>
+                </td>
+            </tr>
+        </table>
     </div>
-  </div>
-</div>
 </body>
 </html>
