@@ -1,16 +1,21 @@
 * {
-    margin: 0;
-    padding: 0;
-  }
+  margin: 0;
+  padding: 0;
+}
 
-  .ads-box {
-    width: 970px; 
-    height: 250px; 
-    background-color: #F7f7f7;
-    border: 2px solid #f7f7f7; 
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
-    text-align: center; 
-    margin: 20px auto; 
+.ads-box {
+  width: 970px;
+  height: 250px;
+  background-color: #F7f7f7;
+  border: 2px solid #f7f7f7;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin: 20px auto;
+  padding: 5px 0;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .ads-span {
@@ -21,64 +26,277 @@
   font-family: "Inter", serif;
 }
 
-  .navbar {
-    background-color: #F7F7F7(255, 255, 255, 0.5);
-    margin: 0px;
-    padding: 0px;
-  }
-  
-  .nav-list {
-    display: flex;
-    list-style-type: none;
-    justify-content: left;
-  }
-  
-  .nav-list li {
-    margin: 3px;
-  }
-  
-  .nav-item {
-    text-decoration: none;
-    color: #969696;
-    font-size: 13px;
-    padding: 10px 5px;
-    position: relative;
-    transition: color 0.3s;
-    font-family: "Inter", sans-serif;
-  }
-  
-  .nav-item:hover {
-    color: #000000;
-  }
-  
-  .nav-item.active {
-    color: #000000;
-  }
-  
-  .nav-item.active::after {
-    content: '';
-    position: absolute;
-    bottom: 7px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #E20A0D;
-    border-radius: 4px;
-  }
-  
-  .image {
-    float: right; 
-    margin-right: 80px; 
-    margin-top: 5px; 
-    width: 150px;
-  }
+.navbar {
+  background-color: #F7F7F7(255, 255, 255, 0.5);
+  margin: 10px 20px;
+  padding: 0px;
+  flex-shrink: 0;
+}
 
-  .other-images {
-    margin-left: 100px;
-    display: flex;
-    margin-top: 10px;
-    flex-direction: column; 
-    align-items: center;
-    position: relative;
-    top: 90px; 
-  }
+.nav-list {
+  display: flex;
+  list-style-type: none;
+  justify-content: left;
+  margin-left: 10px;
+}
+
+.nav-list li {
+  margin: 3px 8px;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: #969696;
+  font-size: 13px;
+  padding: 10px 5px;
+  position: relative;
+  transition: color 0.3s;
+  font-family: "Inter", sans-serif;
+}
+
+.nav-item:hover {
+  color: #000000;
+}
+
+.nav-item.active {
+  color: #000000;
+}
+
+.nav-item.active::after {
+  content: '';
+  position: absolute;
+  bottom: 7px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #E20A0D;
+  border-radius: 4px;
+}
+
+.image-table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin: 20px 0;
+  width: 100%;
+  max-width: 850px;
+  margin: 20px auto;
+}
+
+.candidate-columns {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+  transform: translateX(-25px);
+}
+
+.candidate-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  height: 100%;
+  margin-top: 1px;
+  margin-left: -15px;
+}
+
+.candidate-image {
+  width: 90px;
+  height: 50px;
+  border-radius: 8px;
+  object-fit: contain;
+  padding: 5px;
+  box-sizing: border-box;
+  margin-top: -20px;
+}
+
+.vote-info {
+  width: 200px;
+  height: 23px;
+  padding: 6px;
+  border-radius: 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+  box-sizing: border-box;
+  margin-bottom: 2px;
+}
+
+.vote-info2 {
+  width: 200px;
+  height: 23px;
+  padding: 6px;
+  border-radius: 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+  box-sizing: border-box;
+  margin-bottom: 2px;
+}
+
+.percentage {
+  font-family: "Inter", serif;
+  font-size: 10px;
+  margin-bottom: 0;
+  color: white;
+  font-weight: 700;
+}
+
+.vote-count {
+  font-family: "Inter", serif;
+  font-size: 11px;
+  color: white;
+  font-weight: 500;
+}
+
+.survey-images {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.other-images {
+  margin: 0;
+  position: static;
+  top: auto;
+}
+
+.progress-bar,
+.progress {
+  display: none;
+}
+
+.candidate-row,
+.vote-row {
+  display: none;
+}
+
+.logo-container {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 0;
+  box-sizing: border-box;
+  margin-top: 0;
+  margin-left: -45px;
+}
+
+.survey-logo {
+  width: 45px;
+  height: 20px;
+  object-fit: contain;
+  margin: 0;
+  margin-top: 10px;
+}
+
+.black-text {
+  color: #000000 !important;
+}
+
+.empty-space {
+  width: 50px;
+  height: 50px;
+  visibility: hidden;
+}
+
+.logo-box {
+  background-color: transparent !important;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.survey-table {
+  width: 85%;
+  max-width: 850px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.survey-table td {
+  padding: 2px;
+  text-align: center;
+  vertical-align: middle;
+  height: 25px;
+}
+
+/* Kolom foto kandidat */
+.candidate-photo {
+  width: 120px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin: 3px auto;
+}
+
+/* Kolom logo */
+.logo-column {
+  width: 50px;
+  padding-right: 5px;
+}
+
+.survey-logo {
+  width: 30px;
+  height: 13px;
+  object-fit: contain;
+  margin: 2px 0;
+}
+
+/* Kolom persentase */
+.vote-box {
+  width: 160px;
+  padding: 2px;
+  border-radius: 1px;
+  margin: 0 auto;
+}
+
+.percentage {
+  font-family: "Inter", serif;
+  font-size: 11px;
+  color: white;
+  font-weight: 700;
+  margin: 0;
+}
+
+
+.yellow-bg { background-color: #FFFF00; }
+.gray-bg { background-color: #DDDDDD }
+.red-bg { background-color: #E62020; }
+.green-bg { background-color: #008000; }
+.brown-bg { background-color: #B79164; }
+.orange-bg { background-color: #FE5000; }
+
+
+/* Spacing untuk kolom kosong */
+.empty-cell {
+  height: 40px;
+}
+
+/* Kolom logo di sebelah kiri */
+.logo-column {
+  width: 80px;
+  padding-right: 10px;
+}
+
+/* Sesuaikan margin untuk logo agar sejajar dengan persentase */
+.logo-row td:first-child .survey-logo {
+  margin: 3px 0;
+}
+
+/* Tambahkan gap yang lebih kecil antara kolom */
+.survey-table {
+  column-gap: 10px;
+}
