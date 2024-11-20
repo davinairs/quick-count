@@ -5,25 +5,27 @@
 
   .ads-box {
     width: 970px; 
-    height: 250px; 
+    height: auto;
+    min-height: 250px;
     background-color: #F7f7f7;
     border: 2px solid #f7f7f7; 
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
     text-align: center; 
-    margin: 20px auto; 
-}
+    margin: 20px auto;
+    padding-bottom: 20px;
+  }
 
-.ads-span {
-  padding-bottom: .5em;
-  font-weight: 700;
-  font-size: 12px;
-  text-align: center; 
-  font-family: "Inter", serif;
-}
+  .ads-span {
+    padding-bottom: .5em;
+    font-weight: 700;
+    font-size: 12px;
+    text-align: center; 
+    font-family: "Inter", serif;
+  }
 
   .navbar {
     background-color: #F7F7F7(255, 255, 255, 0.5);
-    margin: 0px;
+    margin: 10px 20px;
     padding: 0px;
   }
   
@@ -31,10 +33,11 @@
     display: flex;
     list-style-type: none;
     justify-content: left;
+    margin-left: 10px;
   }
   
   .nav-list li {
-    margin: 3px;
+    margin: 3px 8px;
   }
   
   .nav-item {
@@ -81,4 +84,148 @@
     align-items: center;
     position: relative;
     top: 90px; 
+  }
+
+  .image-table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin: 20px 0;
+    width: 100%;
+    max-width: 850px;
+    margin: 20px auto;
+  }
+
+  .candidate-columns {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .candidate-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    height: 100%;
+  }
+
+  .candidate-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    object-fit: contain;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+
+  .vote-info {
+    width: 200px;
+    height: 55px;
+    padding: 6px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    box-sizing: border-box;
+    margin-bottom: 2px;
+  }
+
+  .percentage {
+    font-family: "Inter", serif;
+    font-size: 20px;
+    margin-bottom: 0;
+    color: white;
+    font-weight: 700;
+  }
+
+  .vote-count {
+    font-family: "Inter", serif;
+    font-size: 11px;
+    color: white;
+    font-weight: 500;
+  }
+
+  .survey-images {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .other-images {
+    margin: 0;
+    position: static;
+    top: auto;
+  }
+
+  .progress-bar,
+  .progress {
+    display: none;
+  }
+
+  .candidate-row,
+  .vote-row {
+    display: none;
+  }
+
+  .logo-container {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 18px;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    height: 185px;
+    margin-top: 8px;
+  }
+
+  .survey-logo {
+    width: 100px;
+    height: 45px;
+    object-fit: contain;
+    margin: 0;
+  }
+
+  .black-text {
+    color: #000000 !important;
+  }
+
+  .empty-space {
+    width: 200px;
+    height: 200px;
+    visibility: hidden;
+  }
+
+  .logo-box {
+    background-color: transparent !important;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .survey-logo {
+    width: 100px;
+    height: 35px;
+    object-fit: contain;
+    margin: 0;
   }
