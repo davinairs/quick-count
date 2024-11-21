@@ -54,13 +54,9 @@
   font-family: "Inter", sans-serif;
 }
 
-.nav-item:hover {
-  color: #000000;
-}
+.nav-item:hover {color: #000000;}
 
-.nav-item.active {
-  color: #000000;
-}
+.nav-item.active {color: #000000;}
 
 .nav-item.active::after {
   content: '';
@@ -103,16 +99,6 @@
   height: 100%;
   margin-top: 1px;
   margin-left: -15px;
-}
-
-.candidate-image {
-  width: 90px;
-  height: 50px;
-  border-radius: 8px;
-  object-fit: contain;
-  padding: 5px;
-  box-sizing: border-box;
-  margin-top: -20px;
 }
 
 .vote-info {
@@ -233,31 +219,53 @@
   height: 25px;
 }
 
-/* Kolom foto kandidat */
 .candidate-photo {
-  width: 120px;
-  height: 60px;
+  width: 170px;
+  height: 65px;
   object-fit: contain;
   border-radius: 8px;
   margin: 3px auto;
 }
 
-/* Kolom logo */
+.candidate-photo2 {
+  width: 130px;
+  height: 65px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin: 3px auto;
+}
+
 .logo-column {
   width: 50px;
   padding-right: 5px;
 }
 
 .survey-logo {
-  width: 30px;
-  height: 13px;
+  width: 50px;
+  height: 15px;
   object-fit: contain;
   margin: 2px 0;
 }
 
-/* Kolom persentase */
 .vote-box {
-  width: 160px;
+  width: 200px;
+  height: 15px;
+  padding: 2px;
+  border-radius: 1px;
+  margin: 0 auto;
+}
+
+.vote-box2 {
+  width: 280px;
+  height: 15px;
+  padding: 2px;
+  border-radius: 1px;
+  margin: 0 auto;
+}
+
+.vote-box4 {
+  width: 150px;
+  height: 15px;
   padding: 2px;
   border-radius: 1px;
   margin: 0 auto;
@@ -271,6 +279,13 @@
   margin: 0;
 }
 
+.percentageblk {
+  font-family: "Inter", serif;
+  font-size: 11px;
+  color:black;
+  font-weight: 700;
+  margin: 0;
+}
 
 .yellow-bg { background-color: #FFFF00; }
 .gray-bg { background-color: #DDDDDD }
@@ -279,24 +294,19 @@
 .brown-bg { background-color: #B79164; }
 .orange-bg { background-color: #FE5000; }
 
-
-/* Spacing untuk kolom kosong */
 .empty-cell {
   height: 40px;
 }
 
-/* Kolom logo di sebelah kiri */
 .logo-column {
   width: 80px;
   padding-right: 10px;
 }
 
-/* Sesuaikan margin untuk logo agar sejajar dengan persentase */
 .logo-row td:first-child .survey-logo {
   margin: 3px 0;
 }
 
-/* Tambahkan gap yang lebih kecil antara kolom */
 .survey-table {
   column-gap: 10px;
 }
