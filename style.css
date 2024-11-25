@@ -167,23 +167,23 @@
 }
 
 .logo-container {
-  width: 200px;
+  width: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   gap: 2px;
   padding: 0;
   box-sizing: border-box;
-  margin-top: 0;
-  margin-left: -45px;
+  margin: 0;
 }
 
 .survey-logo {
-  width: 45px;
+  width: 60px;
   height: 20px;
   object-fit: contain;
   margin: 0;
-  margin-top: 10px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .black-text {
@@ -205,11 +205,12 @@
 }
 
 .survey-table {
-  width: 85%;
-  max-width: 850px;
+  width: 100%;
+  max-width: 970px;
   margin: 0 auto;
-  border-collapse: collapse;
-  border-spacing: 0;
+  border-collapse: separate;
+  border-spacing: 0 5px;
+  table-layout: fixed;
 }
 
 .survey-table td {
@@ -236,19 +237,16 @@
 }
 
 .logo-column {
-  width: 50px;
-  padding-right: 5px;
-}
-
-.survey-logo {
-  width: 50px;
-  height: 15px;
-  object-fit: contain;
-  margin: 2px 0;
+  width: 80px;
+  padding-right: 20px;
+  text-align: right;
+  vertical-align: middle;
 }
 
 .vote-box {
-  width: 200px;
+  width: 100%;
+  max-width: 200px;
+  min-width: 100px;
   height: 15px;
   padding: 2px;
   border-radius: 1px;
@@ -296,11 +294,6 @@
 
 .empty-cell {
   height: 40px;
-}
-
-.logo-column {
-  width: 80px;
-  padding-right: 10px;
 }
 
 .logo-row td:first-child .survey-logo {
@@ -399,7 +392,6 @@
     position: relative;
     padding: 20px 40px;
     height: auto;
-    min-height: 200px;
 }
 
 .detail-map-section::before {
@@ -453,10 +445,11 @@
     padding: 5px 15px;
     border-radius: 1px;
     text-align: center;
-    width: 200px;
+    /* width: 200px; */
+    width: 40%;
     font-family: 'Inter', sans-serif;
     font-size: 14px;
-    margin-left: 49px;
+    /* margin-left: 20px; */
 }
 
 .detail-progress2 {
@@ -692,18 +685,33 @@ button, input, optgroup, select, textarea {
   margin-top: 1em;
 }
 
+.survey-table td:not(:first-child) {
+  width: calc((100% - 80px) / 3);
+  padding: 0 10px;
+}
+
 /* Media Query untuk Mobile */
 @media screen and (max-width: 486px) {
     .detail-logo {
-      font-size: 40px;
+      font-size: 28px;
+      margin-right: 10px;
     }
 
-    .detail-map-section {
-        padding: 15px;
+    .detail-qc-container {
+        padding: 5px;
+        position: relative;
+        right: 5px;
+        max-width: 100px;
+    }
+
+    .detail-qc-logo {
+        height: 20px;
+        width: auto;
+        max-width: 100%;
     }
     
     .detail-survey-container {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         gap: 20px;
     }
@@ -716,7 +724,7 @@ button, input, optgroup, select, textarea {
     }
     
     .detail-survey-logo {
-        width: auto;
+        width: 20px;
         height: 20px;
     }
     
@@ -779,12 +787,28 @@ button, input, optgroup, select, textarea {
         gap: 20px;
     }
 
+    .detail-survey-logo {
+        width: 60px;
+        height: 60px;
+        margin-right: 15px;
+    }
+
     .detail-logo {
-      font-size: 45px;
+        font-size: 45px;
     }
     
     .detail-progress {
         width: 30%;
-        margin-left: 0;
+        margin-left: 20px;
+    }
+
+    .detail-progress-row {
+        align-items: center;
+        margin: 10px 0;
+    }
+
+    .detail-survey-container {
+        align-items: center;
+        padding: 0 15px;
     }
 }
