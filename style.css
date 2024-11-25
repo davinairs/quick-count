@@ -54,13 +54,9 @@
   font-family: "Inter", sans-serif;
 }
 
-.nav-item:hover {
-  color: #000000;
-}
+.nav-item:hover {color: #000000;}
 
-.nav-item.active {
-  color: #000000;
-}
+.nav-item.active {color: #000000;}
 
 .nav-item.active::after {
   content: '';
@@ -103,16 +99,6 @@
   height: 100%;
   margin-top: 1px;
   margin-left: -15px;
-}
-
-.candidate-image {
-  width: 90px;
-  height: 50px;
-  border-radius: 8px;
-  object-fit: contain;
-  padding: 5px;
-  box-sizing: border-box;
-  margin-top: -20px;
 }
 
 .vote-info {
@@ -233,31 +219,53 @@
   height: 25px;
 }
 
-/* Kolom foto kandidat */
 .candidate-photo {
-  width: 120px;
-  height: 60px;
+  width: 170px;
+  height: 65px;
   object-fit: contain;
   border-radius: 8px;
   margin: 3px auto;
 }
 
-/* Kolom logo */
+.candidate-photo2 {
+  width: 130px;
+  height: 65px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin: 3px auto;
+}
+
 .logo-column {
   width: 50px;
   padding-right: 5px;
 }
 
 .survey-logo {
-  width: 30px;
-  height: 13px;
+  width: 50px;
+  height: 15px;
   object-fit: contain;
   margin: 2px 0;
 }
 
-/* Kolom persentase */
 .vote-box {
-  width: 160px;
+  width: 200px;
+  height: 15px;
+  padding: 2px;
+  border-radius: 1px;
+  margin: 0 auto;
+}
+
+.vote-box2 {
+  width: 280px;
+  height: 15px;
+  padding: 2px;
+  border-radius: 1px;
+  margin: 0 auto;
+}
+
+.vote-box4 {
+  width: 150px;
+  height: 15px;
   padding: 2px;
   border-radius: 1px;
   margin: 0 auto;
@@ -271,6 +279,13 @@
   margin: 0;
 }
 
+.percentageblk {
+  font-family: "Inter", serif;
+  font-size: 11px;
+  color:black;
+  font-weight: 700;
+  margin: 0;
+}
 
 .yellow-bg { background-color: #FFFF00; }
 .gray-bg { background-color: #DDDDDD }
@@ -279,24 +294,497 @@
 .brown-bg { background-color: #B79164; }
 .orange-bg { background-color: #FE5000; }
 
-
-/* Spacing untuk kolom kosong */
 .empty-cell {
   height: 40px;
 }
 
-/* Kolom logo di sebelah kiri */
 .logo-column {
   width: 80px;
   padding-right: 10px;
 }
 
-/* Sesuaikan margin untuk logo agar sejajar dengan persentase */
 .logo-row td:first-child .survey-logo {
   margin: 3px 0;
 }
 
-/* Tambahkan gap yang lebih kecil antara kolom */
 .survey-table {
   column-gap: 10px;
+}
+
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+.logo-text {
+  color: #E62020;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+
+.logo-image {
+  height: 50px;
+}
+
+/* DETAIL */
+
+.detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.detail-logo {
+  color: #E62020;
+  font-size: 48px;
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+}
+
+
+.detail-qc-container {
+  background-color: rgba(227, 30, 36, 0.3);
+  padding: 10px;
+  border-radius: 5px;
+  right: 15px;
+}
+
+.detail-qc-logo {
+  height: 30px;
+  
+}
+
+.image-table td {
+  padding: 10px;
+}
+
+.detail-candidates {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  flex-wrap: nowrap; 
+  padding: 20px;
+  gap: 20px;
+  overflow-x: auto; 
+}
+
+.detail-candidate-img {
+  width: 250px;
+  height: auto; 
+  max-width: 100%; 
+  margin: 10px;
+  object-fit: cover;
+}
+
+.detail-candidate-img2 {
+  width: 250px;
+  height: auto; 
+  max-width: 100%; 
+  margin: 10px;
+  object-fit: cover;
+}
+
+.detail-map-wrapper {
+    margin-top: 40px;
+    width: 100%;
+}
+
+.detail-map-section {
+    background-color: #CB3F44;
+    position: relative;
+    padding: 20px 40px;
+    height: auto;
+    min-height: 200px;
+}
+
+.detail-map-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('image/maps.png');
+  background-size: 55%;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.detail-survey-container {
+  display: flex;
+  gap: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.detail-survey-column {
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.detail-survey-logo {
+    height: 35px;
+    object-fit: contain;
+}
+
+.detail-progress-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.detail-progress-row {
+    display: flex;
+    gap: 30px;
+}
+
+.detail-progress {
+    color: white;
+    padding: 5px 15px;
+    border-radius: 1px;
+    text-align: center;
+    width: 200px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    margin-left: 49px;
+}
+
+.detail-progress2 {
+  color: white;
+  padding: 5px 15px;
+  border-radius: 1px;
+  text-align: center;
+  width: 400px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  margin-left: 49px;
+}
+
+.detail-progress4 {
+  color: white;
+  padding: 5px 15px;
+  border-radius: 1px;
+  text-align: center;
+  width: 150px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  margin-left: 49px;
+}
+
+.detail-news-section {
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.detail-news-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 5px;
+    color: #000;
+}
+
+.detail-news-hashtag {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    color: #E31E24;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.detail-news-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.detail-news-item {
+    width: calc(33.333% - 20px); /* 3 kolom di desktop */
+    max-width: 350px;
+}
+
+.detail-news-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.detail-news-item h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #000;
+}
+
+.detail-news-tag {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #E31E24;
+    margin: 0;
+}
+
+/* Footer */
+.ads_bottom-frame {
+  z-index: 1;
+  background: #fff;
+  margin: 0 auto;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.ads_bottom-frame .ads_728x90 {
+  background: #f7f7f7;
+}
+
+.ads_728x90 {
+  width: auto;
+  height: 130px;
+}
+
+.footer-list__item {
+  display: flex;
+  flex: 0 0 auto;
+  width: calc(100%* 1 / 3 -(30px - 30px* 1 / 3));
+  padding: .25em 0;
+}
+
+footer ul, li, ol {
+  list-style-type: none;
+}
+body, h3, li, ol, p, ul {
+  margin: 0;
+}
+
+footer {
+  display: block;
+}
+
+.footer-wrapper {
+  background: #f2f2f2;
+  width: 100%;
+  margin-top: 1.5em;
+}
+
+.footer-inner, .header-inner {
+  width: 1080px;
+  margin: 0 auto;
+  padding: 1.25em 0;
+}
+
+.to-top {
+  right: 10em;
+  border: none;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.footer-section.is-half {
+  width: 500px;
+  vertical-align: top;
+}
+
+.ads_160x600, .footer-section.is-half, .gallery-box__left, .gallery-box__right, .icon, .jadwal-shalat span {
+  display: inline-block;
+}
+
+.footer-title {
+  font-weight: 700;
+  margin-top: .85em;
+  margin-bottom: .5em;
+  font-size: 1.5em;
+}
+
+.box-title, .footer-title, .nr-title, .title, h3 {
+  letter-spacing: -.025em;
+}
+
+.footer-list {
+  display: flex
+;
+  flex-flow: row wrap;
+  margin-bottom: 2em;
+}
+
+footer ul, li, ol {
+  list-style-type: none;
+}
+
+.footer-title {
+  font-weight: 700;
+  margin-top: .85em;
+  margin-bottom: .5em;
+  font-size: 1.5em;
+}
+
+.box-title, .footer-title, .nr-title, .title, h3 {
+  letter-spacing: -.025em;
+}
+
+.footer-list {
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 2em;
+}
+
+.footer-list__item {
+  display: flex;
+  flex: 0 0 auto;
+  width: calc(100%* 1 / 3 -(30px - 30px* 1 / 3));
+  padding: .25em 0;
+}
+
+.footer-list__notes {
+  background: #e5e5e5;
+  width: fit-content;
+  padding: 1em;
+  border-radius: 10px;
+}
+
+input {
+  line-height: normal;
+}
+
+button, input, optgroup, select, textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.footer-wrapper p {
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  line-height: 1.5em;
+}
+
+.footer-text {
+  text-align: left;
+  padding-top: 1em;
+  border-top: 1px solid rgba(255, 255, 255, .15);
+  margin-top: 1em;
+}
+
+.footer-wrapper p {
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  line-height: 1.5em;
+}
+
+.footer-text {
+  text-align: left;
+  padding-top: 1em;
+  border-top: 1px solid rgba(255, 255, 255, .15);
+  margin-top: 1em;
+}
+
+/* Media Query untuk Mobile */
+@media screen and (max-width: 486px) {
+    .detail-logo {
+      font-size: 40px;
+    }
+
+    .detail-map-section {
+        padding: 15px;
+    }
+    
+    .detail-survey-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .detail-survey-column {
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .detail-survey-logo {
+        width: auto;
+        height: 20px;
+    }
+    
+    .detail-progress-column {
+        width: 100%;
+    }
+    
+    .detail-progress-row {
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .detail-progress {
+        width: 28%;
+        font-size: 12px;
+        padding: 5px;
+        margin-left: 0;
+    }
+    
+    /* Berita */
+    .detail-news-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .detail-news-item {
+        width: 100%;
+        max-width: 350px;
+        margin-bottom: 20px;
+    }
+    
+    .detail-news-title {
+        font-size: 20px;
+    }
+    
+    .detail-news-hashtag {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    
+    .detail-news-image {
+        width: 100%;
+        height: auto;
+    }
+    
+    .detail-news-item h4 {
+        font-size: 16px;
+        margin: 10px 0;
+    }
+    
+    .detail-news-tag {
+        font-size: 14px;
+    }
+}
+
+/* Tambahan untuk ukuran tablet */
+@media screen and (min-width: 487px) and (max-width: 768px) {
+    .detail-news-grid {
+        gap: 20px;
+    }
+
+    .detail-logo {
+      font-size: 45px;
+    }
+    
+    .detail-progress {
+        width: 30%;
+        margin-left: 0;
+    }
 }
